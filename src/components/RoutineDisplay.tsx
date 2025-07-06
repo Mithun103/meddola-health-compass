@@ -1,5 +1,4 @@
-
-import { MessageCircle, Pill, Droplet, WalkingFigure, Moon, ForkKnife, Checklist } from "lucide-react";
+import { MessageCircle, Pill, Droplet, User, Moon, ForkKnife, List } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -19,7 +18,7 @@ const RoutineDisplay = ({ routine, onUpdateInChat }: RoutineDisplayProps) => {
       return <Droplet className="w-5 h-5 text-blue-500" />;
     }
     if (lowerActivity.includes('walk') || lowerActivity.includes('exercise') || lowerActivity.includes('activity')) {
-      return <WalkingFigure className="w-5 h-5 text-green-500" />;
+      return <User className="w-5 h-5 text-green-500" />;
     }
     if (lowerActivity.includes('rest') || lowerActivity.includes('sleep') || lowerActivity.includes('nap')) {
       return <Moon className="w-5 h-5 text-purple-500" />;
@@ -28,7 +27,7 @@ const RoutineDisplay = ({ routine, onUpdateInChat }: RoutineDisplayProps) => {
       return <ForkKnife className="w-5 h-5 text-orange-500" />;
     }
     
-    return <Checklist className="w-5 h-5 text-slate-500" />;
+    return <List className="w-5 h-5 text-slate-500" />;
   };
 
   const formatTime = (time: string) => {
@@ -76,7 +75,7 @@ const RoutineDisplay = ({ routine, onUpdateInChat }: RoutineDisplayProps) => {
           <div className="text-center max-w-md">
             <div className="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <div className="relative">
-                <Checklist className="w-10 h-10 text-slate-400" />
+                <List className="w-10 h-10 text-slate-400" />
                 <div className="absolute -top-1 -right-1 w-5 h-5 bg-coral-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-xs font-bold">+</span>
                 </div>

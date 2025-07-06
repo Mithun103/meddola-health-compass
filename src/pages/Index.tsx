@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { MessageCircle, Brain, Search, Calendar, Pill, Droplet, WalkingFigure, Moon, ForkKnife, Checklist } from "lucide-react";
+import { MessageCircle, Brain, Search, Calendar, Pill, Droplet, User, Moon, ForkKnife, List } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -92,7 +91,7 @@ const Index = () => {
               <CardContent className="p-0">
                 <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <div className="flex">
-                    <Checklist className="w-6 h-6 text-teal-600" />
+                    <List className="w-6 h-6 text-teal-600" />
                     <Calendar className="w-6 h-6 text-teal-600 ml-1" />
                   </div>
                 </div>
