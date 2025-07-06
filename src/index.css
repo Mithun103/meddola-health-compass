@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,20 +40,24 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Meddola Brand Colors */
+    --teal-50: 178 100% 95%;
+    --teal-100: 178 60% 85%;
+    --teal-500: 178 100% 32%;
+    --teal-600: 178 100% 28%;
+    --teal-700: 178 100% 24%;
+    
+    --coral-100: 9 100% 90%;
+    --coral-500: 9 100% 69%;
+    --coral-600: 9 100% 65%;
   }
 
   .dark {
@@ -101,5 +106,65 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-teal-50 {
+    background-color: hsl(var(--teal-50));
+  }
+  .bg-teal-100 {
+    background-color: hsl(var(--teal-100));
+  }
+  .bg-teal-500 {
+    background-color: hsl(var(--teal-500));
+  }
+  .bg-teal-600 {
+    background-color: hsl(var(--teal-600));
+  }
+  .bg-teal-700 {
+    background-color: hsl(var(--teal-700));
+  }
+  .text-teal-600 {
+    color: hsl(var(--teal-600));
+  }
+  .text-teal-700 {
+    color: hsl(var(--teal-700));
+  }
+  .border-teal-200 {
+    border-color: hsl(var(--teal-100));
+  }
+  .border-teal-600 {
+    border-color: hsl(var(--teal-600));
+  }
+  .hover\:bg-teal-50:hover {
+    background-color: hsl(var(--teal-50));
+  }
+  .hover\:bg-teal-600:hover {
+    background-color: hsl(var(--teal-600));
+  }
+  .hover\:bg-teal-700:hover {
+    background-color: hsl(var(--teal-700));
+  }
+  .hover\:text-teal-600:hover {
+    color: hsl(var(--teal-600));
+  }
+  
+  .bg-coral-100 {
+    background-color: hsl(var(--coral-100));
+  }
+  .bg-coral-500 {
+    background-color: hsl(var(--coral-500));
+  }
+  .bg-coral-600 {
+    background-color: hsl(var(--coral-600));
+  }
+  .hover\:bg-coral-600:hover {
+    background-color: hsl(var(--coral-600));
   }
 }
