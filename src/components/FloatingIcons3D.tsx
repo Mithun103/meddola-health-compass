@@ -1,42 +1,64 @@
 
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, Text3D, MeshDistortMaterial, Sphere, Box, Torus } from '@react-three/drei';
+import { Float, MeshDistortMaterial } from '@react-three/drei';
 import { Mesh } from 'three';
 
 function FloatingIcon({ position, icon }: { position: [number, number, number], icon: string }) {
-  const meshRef = useRef<Mesh>(null!);
+  const meshRef = useRef<Mesh>(null);
 
   useFrame((state) => {
-    meshRef.current.rotation.x = Math.sin(state.clock.elapsedTime) * 0.3;
-    meshRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.3;
+    if (meshRef.current) {
+      meshRef.current.rotation.x = Math.sin(state.clock.elapsedTime) * 0.3;
+      meshRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.3;
+    }
   });
 
-  const IconGeometry = () => {
+  const getGeometry = () => {
     switch (icon) {
       case 'brain':
-        return <Sphere args={[0.5, 16, 16]} ref={meshRef}>
-          <MeshDistortMaterial color="#00ffff" distort={0.3} speed={2} />
-        </Sphere>;
+        return (
+          <sphereGeometry args={[0.5, 16, 16]} />
+        );
       case 'pill':
-        return <Box args={[0.3, 0.8, 0.3]} ref={meshRef}>
-          <MeshDistortMaterial color="#ff00ff" distort={0.2} speed={1.5} />
-        </Box>;
+        return (
+          <boxGeometry args={[0.3, 0.8, 0.3]} />
+        );
       case 'heart':
-        return <Torus args={[0.4, 0.2, 8, 16]} ref={meshRef}>
-          <MeshDistortMaterial color="#ff0080" distort={0.4} speed={2.5} />
-        </Torus>;
+        return (
+          <torusGeometry args={[0.4, 0.2, 8, 16]} />
+        );
       default:
-        return <Sphere args={[0.4, 12, 12]} ref={meshRef}>
-          <MeshDistortMaterial color="#00ff80" distort={0.5} speed={1.8} />
-        </Sphere>;
+        return (
+          <sphereGeometry args={[0.4, 12, 12]} />
+        );
+    }
+  };
+
+  const getColor = () => {
+    switch (icon) {
+      case 'brain':
+        return "#00ffff";
+      case 'pill':
+        return "#ff00ff";
+      case 'heart':
+        return "#ff0080";
+      default:
+        return "#00ff80";
     }
   };
 
   return (
     <Float speed={2} rotationIntensity={1} floatIntensity={2}>
       <group position={position}>
-        <IconGeometry />
+        <mesh ref={meshRef}>
+          {getGeometry()}
+          <MeshDistortMaterial 
+            color={getColor()} 
+            distort={0.3} 
+            speed={2} 
+          />
+        </mesh>
       </group>
     </Float>
   );
