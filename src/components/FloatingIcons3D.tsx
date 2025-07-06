@@ -44,13 +44,13 @@ function FloatingIcon({ position, icon }: { position: [number, number, number], 
 
 export default function FloatingIcons3D() {
   const icons = useMemo(() => [
-    { position: [-4, 2, -2], icon: 'brain' },
-    { position: [4, -1, -3], icon: 'pill' },
-    { position: [-2, -3, -1], icon: 'heart' },
-    { position: [3, 3, -4], icon: 'dna' },
-    { position: [-5, -1, -5], icon: 'pulse' },
-    { position: [2, -4, -2], icon: 'molecule' }
-  ] as const, []);
+    { position: [-4, 2, -2] as [number, number, number], icon: 'brain' },
+    { position: [4, -1, -3] as [number, number, number], icon: 'pill' },
+    { position: [-2, -3, -1] as [number, number, number], icon: 'heart' },
+    { position: [3, 3, -4] as [number, number, number], icon: 'dna' },
+    { position: [-5, -1, -5] as [number, number, number], icon: 'pulse' },
+    { position: [2, -4, -2] as [number, number, number], icon: 'molecule' }
+  ], []);
 
   return (
     <div className="absolute inset-0 z-0">

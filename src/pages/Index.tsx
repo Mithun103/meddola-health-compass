@@ -59,7 +59,7 @@ const Index = () => {
       <section className="relative z-10 px-6 py-20 text-center">
         <div className="max-w-4xl mx-auto">
           <GlitchText className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="gradient-text">AI NEURAL</span>
+            AI NEURAL
           </GlitchText>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             HEALTH MATRIX
