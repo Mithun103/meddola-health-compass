@@ -9,93 +9,91 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 25% 6%;
+    --foreground: 180 100% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 25% 8%;
+    --card-foreground: 180 100% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 25% 8%;
+    --popover-foreground: 180 100% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 25% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 260 100% 60%;
+    --secondary-foreground: 220 25% 6%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 180 20% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 300 100% 70%;
+    --accent-foreground: 220 25% 6%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 180 100% 50%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 180 100% 90%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 220 25% 6%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 180 100% 90%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 180 100% 50%;
 
-    /* Meddola Brand Colors */
-    --teal-50: 178 100% 95%;
-    --teal-100: 178 60% 85%;
-    --teal-500: 178 100% 32%;
-    --teal-600: 178 100% 28%;
-    --teal-700: 178 100% 24%;
-    
-    --coral-100: 9 100% 90%;
-    --coral-500: 9 100% 69%;
-    --coral-600: 9 100% 65%;
+    /* Neon Brand Colors */
+    --neon-cyan: 180 100% 50%;
+    --neon-purple: 260 100% 60%;
+    --neon-pink: 300 100% 70%;
+    --neon-green: 120 100% 50%;
+    --neon-blue: 240 100% 60%;
+    --dark-bg: 220 25% 6%;
+    --darker-bg: 220 30% 4%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 25% 6%;
+    --foreground: 180 100% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 25% 8%;
+    --card-foreground: 180 100% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 25% 8%;
+    --popover-foreground: 180 100% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 25% 6%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 260 100% 60%;
+    --secondary-foreground: 220 25% 6%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 180 20% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 300 100% 70%;
+    --accent-foreground: 220 25% 6%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 180 100% 50%;
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 180 100% 90%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 220 25% 6%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 180 100% 90%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 180 100% 50%;
   }
 }
 
@@ -107,6 +105,7 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, hsl(var(--darker-bg)) 0%, hsl(var(--dark-bg)) 100%);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -115,56 +114,60 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .bg-teal-50 {
-    background-color: hsl(var(--teal-50));
-  }
-  .bg-teal-100 {
-    background-color: hsl(var(--teal-100));
-  }
-  .bg-teal-500 {
-    background-color: hsl(var(--teal-500));
-  }
-  .bg-teal-600 {
-    background-color: hsl(var(--teal-600));
-  }
-  .bg-teal-700 {
-    background-color: hsl(var(--teal-700));
-  }
-  .text-teal-600 {
-    color: hsl(var(--teal-600));
-  }
-  .text-teal-700 {
-    color: hsl(var(--teal-700));
-  }
-  .border-teal-200 {
-    border-color: hsl(var(--teal-100));
-  }
-  .border-teal-600 {
-    border-color: hsl(var(--teal-600));
-  }
-  .hover\:bg-teal-50:hover {
-    background-color: hsl(var(--teal-50));
-  }
-  .hover\:bg-teal-600:hover {
-    background-color: hsl(var(--teal-600));
-  }
-  .hover\:bg-teal-700:hover {
-    background-color: hsl(var(--teal-700));
-  }
-  .hover\:text-teal-600:hover {
-    color: hsl(var(--teal-600));
+  .neon-glow {
+    box-shadow: 0 0 5px hsl(var(--neon-cyan)), 0 0 10px hsl(var(--neon-cyan)), 0 0 15px hsl(var(--neon-cyan));
   }
   
-  .bg-coral-100 {
-    background-color: hsl(var(--coral-100));
+  .neon-text {
+    text-shadow: 0 0 5px hsl(var(--neon-cyan)), 0 0 10px hsl(var(--neon-cyan)), 0 0 15px hsl(var(--neon-cyan));
   }
-  .bg-coral-500 {
-    background-color: hsl(var(--coral-500));
+  
+  .neon-border {
+    border: 1px solid hsl(var(--neon-cyan));
+    box-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.5);
   }
-  .bg-coral-600 {
-    background-color: hsl(var(--coral-600));
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
-  .hover\:bg-coral-600:hover {
-    background-color: hsl(var(--coral-600));
+  
+  .gradient-text {
+    background: linear-gradient(45deg, hsl(var(--neon-cyan)), hsl(var(--neon-purple)), hsl(var(--neon-pink)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes glow-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 5px hsl(var(--neon-cyan)), 0 0 10px hsl(var(--neon-cyan)); 
+    }
+    50% { 
+      box-shadow: 0 0 20px hsl(var(--neon-cyan)), 0 0 30px hsl(var(--neon-cyan)), 0 0 40px hsl(var(--neon-cyan)); 
+    }
+  }
+  
+  @keyframes matrix-rain {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(100vh); }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+  
+  .animate-matrix {
+    animation: matrix-rain 10s linear infinite;
   }
 }

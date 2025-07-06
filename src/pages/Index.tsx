@@ -1,8 +1,12 @@
+
 import { useState } from "react";
-import { MessageCircle, Brain, Search, Calendar, Pill, Droplet, User, Moon, ForkKnife, List } from "lucide-react";
+import { MessageCircle, Brain, Search, Calendar, Pill, Droplet, User, Moon, ForkKnife, List, Zap, Shield, Cpu, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
+import FloatingIcons3D from "@/components/FloatingIcons3D";
+import MatrixRain from "@/components/MatrixRain";
+import GlitchText from "@/components/GlitchText";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -12,26 +16,41 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-teal-50 to-slate-100">
-      {/* Animated Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-teal-100/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-coral-100/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      {/* Matrix Rain Background */}
+      <MatrixRain />
+      
+      {/* 3D Floating Icons */}
+      <FloatingIcons3D />
+
+      {/* Animated Grid Background */}
+      <div className="fixed inset-0 opacity-10">
+        <div className="absolute inset-0" 
+             style={{
+               backgroundImage: `linear-gradient(rgba(0,255,255,0.1) 1px, transparent 1px),
+                                linear-gradient(90deg, rgba(0,255,255,0.1) 1px, transparent 1px)`,
+               backgroundSize: '50px 50px'
+             }}>
+        </div>
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 flex items-center justify-between px-6 py-4 bg-white/80 backdrop-blur-sm border-b border-slate-200/50">
+      <nav className="relative z-10 flex items-center justify-between px-6 py-4 glass-effect border-b border-cyan-500/20">
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">M</span>
+          <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center neon-glow">
+            <span className="text-black font-bold text-sm">M</span>
           </div>
-          <span className="text-xl font-bold text-slate-800">Meddola</span>
+          <span className="text-2xl font-bold gradient-text">Meddola</span>
         </div>
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-slate-600 hover:text-teal-600 transition-colors">Features</a>
-          <a href="#disclaimer" className="text-slate-600 hover:text-teal-600 transition-colors">Disclaimer</a>
-          <Button onClick={handleStartChat} className="bg-coral-500 hover:bg-coral-600 text-white px-6">
-            Chat Now
+          <a href="#features" className="text-cyan-300 hover:text-cyan-100 transition-all duration-300 hover:neon-text">Features</a>
+          <a href="#disclaimer" className="text-cyan-300 hover:text-cyan-100 transition-all duration-300 hover:neon-text">Disclaimer</a>
+          <Button 
+            onClick={handleStartChat} 
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-black font-bold px-6 neon-glow hover:animate-glow-pulse transition-all duration-300"
+          >
+            <Zap className="w-4 h-4 mr-2" />
+            Neural Link
           </Button>
         </div>
       </nav>
@@ -39,140 +58,128 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative z-10 px-6 py-20 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
-            Intelligent Health Guidance, 
-            <span className="text-teal-600"> Instantly</span>
+          <GlitchText className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            <span className="gradient-text">AI NEURAL</span>
+          </GlitchText>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            HEALTH MATRIX
           </h1>
-          <h2 className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Describe your symptoms to get clear insights on potential conditions, medication, 
-            and personalized health routines from your AI companion.
-          </h2>
+          <div className="relative mb-12">
+            <h2 className="text-xl md:text-2xl text-cyan-300 leading-relaxed max-w-3xl mx-auto">
+              Interface with advanced AI algorithms for 
+              <span className="text-purple-400"> quantum health analysis</span>, 
+              <span className="text-pink-400"> molecular diagnostics</span>, and 
+              <span className="text-green-400"> bio-optimization protocols</span>
+            </h2>
+          </div>
           <Button 
             onClick={handleStartChat}
             size="lg" 
-            className="bg-coral-500 hover:bg-coral-600 text-white px-12 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 text-black font-bold px-12 py-4 text-lg rounded-full neon-glow hover:animate-glow-pulse transition-all duration-300 transform hover:scale-105 animate-float"
           >
-            Start Your Confidential Chat
+            <Brain className="w-6 h-6 mr-3" />
+            INITIATE NEURAL LINK
           </Button>
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="relative z-10 px-6 py-20 bg-white/50 backdrop-blur-sm">
+      {/* Protocol Sequence Section */}
+      <section className="relative z-10 px-6 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-16">
-            How It Works
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+            <span className="gradient-text">PROTOCOL SEQUENCE</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80">
-              <CardContent className="p-0">
-                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <MessageCircle className="w-8 h-8 text-teal-600" />
+            <Card className="glass-effect neon-border hover:animate-glow-pulse transition-all duration-500 transform hover:scale-105">
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 neon-glow animate-float">
+                  <MessageCircle className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Tell Us How You Feel</h3>
-                <p className="text-slate-600">Use simple language to describe your symptoms or ask a question.</p>
+                <h3 className="text-xl font-bold text-cyan-300 mb-4">DATA INPUT</h3>
+                <p className="text-slate-300">Neural interface accepts biometric data streams via natural language processing</p>
               </CardContent>
             </Card>
             
-            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80">
-              <CardContent className="p-0">
-                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <div className="flex">
-                    <Brain className="w-6 h-6 text-teal-600" />
-                    <Search className="w-6 h-6 text-teal-600 ml-1" />
-                  </div>
+            <Card className="glass-effect neon-border hover:animate-glow-pulse transition-all duration-500 transform hover:scale-105" style={{ animationDelay: '0.2s' }}>
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 neon-glow animate-float">
+                  <Cpu className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Get AI-Powered Insights</h3>
-                <p className="text-slate-600">Receive instant information on potential causes, remedies, and drug info.</p>
+                <h3 className="text-xl font-bold text-purple-300 mb-4">AI PROCESSING</h3>
+                <p className="text-slate-300">Quantum algorithms analyze molecular patterns and genetic markers</p>
               </CardContent>
             </Card>
             
-            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/80">
-              <CardContent className="p-0">
-                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <div className="flex">
-                    <List className="w-6 h-6 text-teal-600" />
-                    <Calendar className="w-6 h-6 text-teal-600 ml-1" />
-                  </div>
+            <Card className="glass-effect neon-border hover:animate-glow-pulse transition-all duration-500 transform hover:scale-105" style={{ animationDelay: '0.4s' }}>
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6 neon-glow animate-float">
+                  <Database className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Build Your Health Plan</h3>
-                <p className="text-slate-600">Generate and view a personalized daily routine to support your well-being.</p>
+                <h3 className="text-xl font-bold text-pink-300 mb-4">PROTOCOL GENERATION</h3>
+                <p className="text-slate-300">Bio-optimization sequences compiled for maximum health efficiency</p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Features Showcase */}
+      {/* Features Matrix */}
       <section id="features" className="relative z-10 px-6 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-16">
-            Comprehensive Health Support
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+            <span className="gradient-text">SYSTEM CAPABILITIES</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 hover:bg-white">
-              <CardContent className="p-0">
-                <Brain className="w-10 h-10 text-teal-600 mb-4" />
-                <h3 className="font-bold text-slate-800 mb-2">Symptom Analysis</h3>
-                <p className="text-sm text-slate-600">AI-powered assessment of your symptoms and health concerns.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 hover:bg-white">
-              <CardContent className="p-0">
-                <Pill className="w-10 h-10 text-teal-600 mb-4" />
-                <h3 className="font-bold text-slate-800 mb-2">Drug Information</h3>
-                <p className="text-sm text-slate-600">Comprehensive medication details, interactions, and guidance.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 hover:bg-white">
-              <CardContent className="p-0">
-                <Calendar className="w-10 h-10 text-teal-600 mb-4" />
-                <h3 className="font-bold text-slate-800 mb-2">Personalized Routines</h3>
-                <p className="text-sm text-slate-600">Custom daily health plans tailored to your specific needs.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 hover:bg-white">
-              <CardContent className="p-0">
-                <Search className="w-10 h-10 text-teal-600 mb-4" />
-                <h3 className="font-bold text-slate-800 mb-2">Context-Aware Memory</h3>
-                <p className="text-sm text-slate-600">Remembers your health history for more accurate guidance.</p>
-              </CardContent>
-            </Card>
+            {[
+              { icon: Brain, title: "Neural Analysis", desc: "Advanced symptom pattern recognition", color: "from-cyan-500 to-blue-600" },
+              { icon: Pill, title: "Molecular Database", desc: "Comprehensive pharmaceutical matrix", color: "from-purple-500 to-pink-600" },
+              { icon: Calendar, title: "Bio-Rhythms", desc: "Circadian optimization protocols", color: "from-green-500 to-cyan-600" },
+              { icon: Shield, title: "Secure Matrix", desc: "Encrypted health data streams", color: "from-pink-500 to-purple-600" }
+            ].map((feature, index) => (
+              <Card key={index} className="glass-effect neon-border hover:animate-glow-pulse transition-all duration-500 transform hover:scale-105 animate-float" style={{ animationDelay: `${index * 0.2}s` }}>
+                <CardContent className="p-6 text-center">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center mx-auto mb-4 neon-glow`}>
+                    <feature.icon className="w-8 h-8 text-black" />
+                  </div>
+                  <h3 className="font-bold text-cyan-300 mb-2">{feature.title}</h3>
+                  <p className="text-sm text-slate-400">{feature.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Trust & Transparency Section */}
-      <section id="disclaimer" className="relative z-10 px-6 py-20 bg-slate-100/50">
+      {/* Security Protocol Section */}
+      <section id="disclaimer" className="relative z-10 px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8">
-            Knowledgeable & Responsible
+          <h2 className="text-4xl font-bold mb-8">
+            <span className="gradient-text">SECURITY PROTOCOL</span>
           </h2>
-          <div className="bg-white/80 rounded-2xl p-8 shadow-lg">
-            <p className="text-lg text-slate-700 leading-relaxed">
-              Meddola provides educational information powered by advanced AI. 
-              It is not a substitute for professional medical advice. 
-              Please consult a qualified healthcare provider for a definitive diagnosis and treatment plan.
+          <div className="glass-effect neon-border rounded-2xl p-8">
+            <Shield className="w-16 h-16 mx-auto mb-6 text-cyan-400 neon-glow animate-float" />
+            <p className="text-lg text-slate-300 leading-relaxed">
+              This neural interface provides educational analysis via quantum AI algorithms. 
+              For critical system diagnostics, consult certified biological maintenance specialists. 
+              All data streams are encrypted and processed in secure matrix protocols.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="relative z-10 px-6 py-20 bg-gradient-to-r from-teal-600 to-teal-700">
+      {/* Final Neural Link Section */}
+      <section className="relative z-10 px-6 py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Ready to feel more in control of your health?
-          </h2>
+          <GlitchText className="text-4xl md:text-5xl font-bold text-white mb-8">
+            READY TO SYNC WITH THE MATRIX?
+          </GlitchText>
           <Button 
             onClick={handleStartChat}
             size="lg" 
-            className="bg-coral-500 hover:bg-coral-600 text-white px-12 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 text-black font-bold px-12 py-4 text-lg rounded-full neon-glow hover:animate-glow-pulse transition-all duration-300 transform hover:scale-110 animate-float"
           >
-            Start Your Confidential Chat
+            <Zap className="w-6 h-6 mr-3" />
+            ACTIVATE NEURAL INTERFACE
           </Button>
         </div>
       </section>
